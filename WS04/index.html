@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izolde's Ramen Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Task 1: Semantic elements with navigation -->
+    <header>
+        <h1>Izolde's Ramen Kitchen</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#toppings">Toppings</a></li>
+                <li><a href="#recipe">Recipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Ramen</h2>
+            <p>
+                Ramen is my favourite meal: springy noodles in a rich, steaming
+                broth, finished with a handful of toppings. This page is my
+                little cooking corner where I collect what makes a great bowl.
+            </p>
+        </section>
+
+        <!-- Task 2: Grid layout, two rows and three columns -->
+        <section id="toppings">
+            <h2>Favourite Toppings</h2>
+            <div class="grid-container">
+                <div class="grid-item">Soft-boiled egg</div>
+                <div class="grid-item">Chashu pork</div>
+                <div class="grid-item">Nori seaweed</div>
+                <div class="grid-item">Spring onion</div>
+                <div class="grid-item">Corn</div>
+                <div class="grid-item">Bamboo shoots</div>
+            </div>
+        </section>
+
+        <!-- Task 3: Flexbox layout, three boxes in a row -->
+        <section id="recipe">
+            <h2>Three Steps to a Good Bowl</h2>
+            <div class="flex-container">
+                <div class="box">
+                    <h3>1. Broth</h3>
+                    <p>Simmer bones, garlic and ginger slowly for a deep flavour.</p>
+                </div>
+                <div class="box">
+                    <h3>2. Noodles</h3>
+                    <p>Boil fresh noodles for just a couple of minutes, then drain.</p>
+                </div>
+                <div class="box">
+                    <h3>3. Toppings</h3>
+                    <p>Arrange the toppings on top and serve while it is hot.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 4: Media query colour change -->
+        <section id="resize">
+            <h2>Hungry on Any Screen</h2>
+            <div class="responsive-box">Resize the window to see the effect</div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Got a ramen recipe to share? Tell me about it at the next workshop!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 Izolde Springe</p>
+    </footer>
+</body>
+</html>
