@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading, paragraph and image -->
+    <!-- Inline CSS (overrides the internal rule for h1) -->
+    <h1 style="color: red;">Izolde Springe</h1>
+    <p>
+        Hi! I am a student at Laurea University of Applied Sciences, currently
+        taking a course in website development. I enjoy learning new things,
+        solving problems and building things on the web.
+    </p>
+
+    <!-- WS03 Task 4: Grayscale filter, removed on hover -->
+    <img class="filter-image" src="../WS01/IzoldeSpringe.png" alt="Portrait photo of Izolde Springe" width="300">
+
+    <!-- WS02 Task 3: Div with padding and margin -->
+    <div class="content-box">
+        <h2>This is CSS workshop</h2>
+        <p>I am learning css</p>
+    </div>
+
+    <!-- WS03 Task 1: Transition on hover -->
+    <h2>Transition</h2>
+    <button class="transition-button">Hover me</button>
+
+    <!-- WS03 Task 2: Animation -->
+    <h2>Animation</h2>
+    <div class="animation-box"></div>
+
+    <!-- Unordered list of hobbies -->
+    <h2>My Hobbies</h2>
+    <ul>
+        <li>Reading</li>
+        <li>Hiking</li>
+        <li>Photography</li>
+    </ul>
+
+    <!-- WS03 Task 3: Pseudo-classes -->
+    <h2>Pseudo-classes</h2>
+    <ul class="pseudo-list">
+        <li>Milk</li>
+        <li>Chocolate</li>
+        <li>Bread</li>
+        <li>Cheese</li>
+    </ul>
+
+    <!-- WS03 Task 5: Pseudo-elements -->
+    <h2>Pseudo-elements</h2>
+    <blockquote class="quote">
+        Be yourself; everyone else is already taken.
+    </blockquote>
+
+    <!-- Link to a favourite web page -->
+    <h2>My Favourite Web Page</h2>
+    <p><a href="https://www.laurea.fi">Visit Laurea</a></p>
+
+    <!-- Table of ongoing courses -->
+    <h2>My Ongoing Courses</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <td>Website Development</td>
+            <td>5 ECTS</td>
+        </tr>
+        <tr>
+            <td>Programming Basics</td>
+            <td>5 ECTS</td>
+        </tr>
+        <tr>
+            <td>Professional English</td>
+            <td>3 ECTS</td>
+        </tr>
+    </table>
+
+    <!-- Contact form -->
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
