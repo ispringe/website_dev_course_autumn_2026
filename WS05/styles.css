@@ -1,0 +1,118 @@
+/* Base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4ead5;
+}
+
+h1, h2, h3 {
+    color: #c8102e;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Task 4: Responsive navigation bar */
+.responsive-nav .menu-toggle {
+    display: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #c8102e;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.responsive-nav .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.responsive-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.responsive-nav a:hover {
+    color: #ffb3c0;
+}
+
+/* Task 2: Responsive image */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Task 1: Responsive layout */
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Task 3: Media query box */
+.media-query-box {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+    }
+
+    .media-query-box {
+        background-color: lightcoral;
+    }
+
+    .responsive-nav .nav-list {
+        display: none;
+    }
+
+    .responsive-nav .menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) {
+    .media-query-box {
+        background-color: lightblue;
+    }
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="judo-title">
+    <title id="judo-title">Illustration of a judoka in a white gi and black belt</title>
+
+    <!-- Background and rising sun -->
+    <rect width="800" height="500" fill="#f4ead5"/>
+    <circle cx="400" cy="240" r="180" fill="#c8102e"/>
+
+    <!-- Tatami mat -->
+    <rect y="420" width="800" height="80" fill="#7a9b57"/>
+    <g stroke="#5f7d42" stroke-width="3">
+        <line x1="0" y1="460" x2="800" y2="460"/>
+        <line x1="200" y1="420" x2="200" y2="500"/>
+        <line x1="400" y1="420" x2="400" y2="500"/>
+        <line x1="600" y1="420" x2="600" y2="500"/>
+    </g>
+
+    <g stroke="#222" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+        <!-- Legs (gi trousers) -->
+        <path d="M360 320 L408 320 L388 424 L326 424 Z" fill="#fff"/>
+        <path d="M392 320 L440 320 L486 424 L424 424 Z" fill="#fff"/>
+
+        <!-- Bare feet -->
+        <ellipse cx="352" cy="428" rx="34" ry="11" fill="#f1c9a5"/>
+        <ellipse cx="458" cy="428" rx="34" ry="11" fill="#f1c9a5"/>
+
+        <!-- Arms (jacket sleeves) reaching to grip -->
+        <path d="M360 222 L292 280 L258 250" fill="none" stroke="#222" stroke-width="38"/>
+        <path d="M360 222 L292 280 L258 250" fill="none" stroke="#fff" stroke-width="30"/>
+        <path d="M440 222 L508 280 L542 250" fill="none" stroke="#222" stroke-width="38"/>
+        <path d="M440 222 L508 280 L542 250" fill="none" stroke="#fff" stroke-width="30"/>
+
+        <!-- Hands -->
+        <circle cx="252" cy="246" r="16" fill="#f1c9a5"/>
+        <circle cx="548" cy="246" r="16" fill="#f1c9a5"/>
+
+        <!-- Jacket -->
+        <path d="M348 206 L452 206 L460 336 L340 336 Z" fill="#fff"/>
+        <path d="M376 206 L412 292 M424 206 L388 292" fill="none" stroke="#999" stroke-width="4"/>
+
+        <!-- Black belt with knot and tails -->
+        <rect x="340" y="300" width="120" height="18" fill="#111"/>
+        <rect x="388" y="316" width="24" height="14" fill="#111"/>
+        <path d="M392 330 L384 366 L400 366 Z M408 330 L416 366 L400 366 Z" fill="#111"/>
+
+        <!-- Neck and head -->
+        <rect x="388" y="186" width="24" height="26" fill="#f1c9a5"/>
+        <circle cx="400" cy="160" r="38" fill="#f1c9a5"/>
+        <path d="M362 158 Q366 112 400 112 Q434 112 438 158 Q420 134 400 134 Q380 134 362 158 Z" fill="#222"/>
+    </g>
+
+    <!-- Face -->
+    <circle cx="386" cy="162" r="3.5" fill="#222"/>
+    <circle cx="414" cy="162" r="3.5" fill="#222"/>
+    <path d="M388 180 Q400 188 412 180" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+</svg>
