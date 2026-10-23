@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izolde Springe: Bootstrap Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Task 1: Responsive navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Izolde Springe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <h1>Learning Bootstrap</h1>
+        <p class="lead">
+            Workshop 6 of my website development course at Laurea University of
+            Applied Sciences. Each section below uses a different Bootstrap component.
+        </p>
+
+        <!-- Task 5: Alerts -->
+        <div class="alert alert-warning" role="alert">
+            This is a warning alert—check it out!
+        </div>
+        <div class="alert alert-success" role="alert">
+            Success alert: Bootstrap is loaded and working.
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Danger alert: something needs your attention.
+        </div>
+        <div class="alert alert-info" role="alert">
+            Info alert: resize the window to see the layout change.
+        </div>
+
+        <!-- Task 2: Grid layout, three columns on medium screens and up -->
+        <h2 id="about" class="mt-4">About</h2>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <h3 class="h5">Column 1</h3>
+                <p>I am a student who enjoys learning new things and solving problems.</p>
+            </div>
+            <div class="col-md-4 col-12">
+                <h3 class="h5">Column 2</h3>
+                <p>I am building websites with HTML, CSS and now Bootstrap.</p>
+            </div>
+            <div class="col-md-4 col-12">
+                <h3 class="h5">Column 3</h3>
+                <p>On small screens these three columns stack into a single column.</p>
+            </div>
+        </div>
+
+        <!-- Task 3: Buttons -->
+        <h2 class="mt-4">Buttons</h2>
+        <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-outline-dark">Outline</button>
+        </div>
+
+        <!-- Task 4: Card -->
+        <h2 class="mt-4">Card</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="../WS01/IzoldeSpringe.png" class="card-img-top" alt="Portrait photo of Izolde Springe">
+            <div class="card-body">
+                <h3 class="card-title">Izolde Springe</h3>
+                <p class="card-text">This is a simple card example using Bootstrap.</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+
+        <h2 id="contact" class="mt-4">Contact</h2>
+        <p>Find out more about my studies at <a href="https://www.laurea.fi">Laurea</a>.</p>
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p class="mb-0">Copyright 2026 Izolde Springe</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
