@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mountain biking photo gallery with a slideshow of forest and mountain rides.">
+    <title>Gallery | Dirt &amp; Pine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Dirt <span>&amp;</span> Pine</a>
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span class="hamburger"></span>
+                <span class="visually-hidden">Menu</span>
+            </label>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trails.html">Trails</a></li>
+                    <li><a href="gear.html">Gear</a></li>
+                    <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                    <li><a href="join.html">Join a Ride</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero hero-small hero-gallery">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow">Gallery</span>
+                    <h1>Moments on the trail</h1>
+                    <p class="hero-text">Forests, mountains and plenty of mud. A collection of rides to inspire your next adventure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Slideshow</span>
+                    <h2>Highlights</h2>
+                    <p>The slideshow changes every five seconds. Hover over it to pause.</p>
+                </div>
+                <div class="slideshow">
+                    <figure class="slide">
+                        <img src="images/slide-1.jpg" alt="Rider descending a mountain trail at sunset" width="1600" height="900">
+                        <figcaption>Golden hour descent</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/slide-2.jpg" alt="Mountain biker riding through a misty pine forest" width="1600" height="900">
+                        <figcaption>Misty morning in the pines</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/slide-3.jpg" alt="Rider in the air over a dirt jump" width="1600" height="900">
+                        <figcaption>Catching air</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/slide-4.jpg" alt="Mountain bike splashing through a muddy puddle" width="1600" height="900">
+                        <figcaption>Autumn mud</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="photos">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Photo gallery</span>
+                    <h2>Browse the photos</h2>
+                    <p>Click a photo to open it in a larger view. Use the arrows to move between photos.</p>
+                </div>
+                <ul class="gallery-grid">
+                    <li>
+                        <a class="gallery-item" href="#photo-1">
+                            <img src="images/gallery-1.jpg" alt="Mountain biker riding down a rocky descent" width="800" height="533" loading="lazy">
+                            <span class="gallery-caption">Rocky descent</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gallery-item" href="#photo-2">
+                            <img src="images/gallery-2.jpg" alt="Narrow trail winding through a green forest" width="800" height="533" loading="lazy">
+                            <span class="gallery-caption">Forest singletrack</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gallery-item" href="#photo-3">
+                            <img src="images/gallery-3.jpg" alt="Rider stopped on a hilltop looking over the forest" width="800" height="533" loading="lazy">
+                            <span class="gallery-caption">Hilltop view</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gallery-item" href="#photo-4">
+                            <img src="images/gallery-4.jpg" alt="Close-up of a muddy mountain bike tyre" width="800" height="533" loading="lazy">
+                            <span class="gallery-caption">Muddy tyres</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gallery-item" href="#photo-5">
+                            <img src="images/gallery-5.jpg" alt="Rider leaning hard into a berm" width="800" height="533" loading="lazy">
+                            <span class="gallery-caption">Into the berm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gallery-item" href="#photo-6">
+                            <img src="images/gallery-6.jpg" alt="Group of mountain bikers riding together" width="800" height="533" loading="lazy">
+                            <span class="gallery-caption">Group ride</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Lightbox views: each one opens when its id is the URL target -->
+        <div class="lightbox" id="photo-1">
+            <a class="lightbox-close" href="#photos" aria-label="Close">&times;</a>
+            <a class="lightbox-arrow lightbox-prev" href="#photo-6" aria-label="Previous photo">&#8249;</a>
+            <figure class="lightbox-figure">
+                <img src="images/gallery-1.jpg" alt="Mountain biker riding down a rocky descent" width="800" height="533" loading="lazy">
+                <figcaption>Rocky descent</figcaption>
+            </figure>
+            <a class="lightbox-arrow lightbox-next" href="#photo-2" aria-label="Next photo">&#8250;</a>
+        </div>
+        <div class="lightbox" id="photo-2">
+            <a class="lightbox-close" href="#photos" aria-label="Close">&times;</a>
+            <a class="lightbox-arrow lightbox-prev" href="#photo-1" aria-label="Previous photo">&#8249;</a>
+            <figure class="lightbox-figure">
+                <img src="images/gallery-2.jpg" alt="Narrow trail winding through a green forest" width="800" height="533" loading="lazy">
+                <figcaption>Forest singletrack</figcaption>
+            </figure>
+            <a class="lightbox-arrow lightbox-next" href="#photo-3" aria-label="Next photo">&#8250;</a>
+        </div>
+        <div class="lightbox" id="photo-3">
+            <a class="lightbox-close" href="#photos" aria-label="Close">&times;</a>
+            <a class="lightbox-arrow lightbox-prev" href="#photo-2" aria-label="Previous photo">&#8249;</a>
+            <figure class="lightbox-figure">
+                <img src="images/gallery-3.jpg" alt="Rider stopped on a hilltop looking over the forest" width="800" height="533" loading="lazy">
+                <figcaption>Hilltop view</figcaption>
+            </figure>
+            <a class="lightbox-arrow lightbox-next" href="#photo-4" aria-label="Next photo">&#8250;</a>
+        </div>
+        <div class="lightbox" id="photo-4">
+            <a class="lightbox-close" href="#photos" aria-label="Close">&times;</a>
+            <a class="lightbox-arrow lightbox-prev" href="#photo-3" aria-label="Previous photo">&#8249;</a>
+            <figure class="lightbox-figure">
+                <img src="images/gallery-4.jpg" alt="Close-up of a muddy mountain bike tyre" width="800" height="533" loading="lazy">
+                <figcaption>Muddy tyres</figcaption>
+            </figure>
+            <a class="lightbox-arrow lightbox-next" href="#photo-5" aria-label="Next photo">&#8250;</a>
+        </div>
+        <div class="lightbox" id="photo-5">
+            <a class="lightbox-close" href="#photos" aria-label="Close">&times;</a>
+            <a class="lightbox-arrow lightbox-prev" href="#photo-4" aria-label="Previous photo">&#8249;</a>
+            <figure class="lightbox-figure">
+                <img src="images/gallery-5.jpg" alt="Rider leaning hard into a berm" width="800" height="533" loading="lazy">
+                <figcaption>Into the berm</figcaption>
+            </figure>
+            <a class="lightbox-arrow lightbox-next" href="#photo-6" aria-label="Next photo">&#8250;</a>
+        </div>
+        <div class="lightbox" id="photo-6">
+            <a class="lightbox-close" href="#photos" aria-label="Close">&times;</a>
+            <a class="lightbox-arrow lightbox-prev" href="#photo-5" aria-label="Previous photo">&#8249;</a>
+            <figure class="lightbox-figure">
+                <img src="images/gallery-6.jpg" alt="Group of mountain bikers riding together" width="800" height="533" loading="lazy">
+                <figcaption>Group ride</figcaption>
+            </figure>
+            <a class="lightbox-arrow lightbox-next" href="#photo-1" aria-label="Next photo">&#8250;</a>
+        </div>
+
+        <section class="section">
+            <div class="container text-center">
+                <h2>Want to be in the next photo?</h2>
+                <p>Join a group ride and get out on the trails with us.</p>
+                <a class="btn btn-primary" href="join.html">Join a ride</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <a class="logo" href="index.html">Dirt <span>&amp;</span> Pine</a>
+                    <p class="footer-text">A mountain biking guide for riders of every level, from the first wobbly ride to black diamond descents.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer">
+                    <h2 class="footer-heading">Explore</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trails.html">Trails</a></li>
+                        <li><a href="gear.html">Gear</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="join.html">Join a Ride</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-bottom">&copy; 2026 Izolde Springe. Student project for the Website Development course at Laurea University of Applied Sciences.</p>
+        </div>
+    </footer>
+</body>
+</html>

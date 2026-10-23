@@ -1,0 +1,1518 @@
+/* =========================================================
+   Dirt & Pine: shared stylesheet for every page
+   ========================================================= */
+
+/* The stylesheet is ordered by page section. Selectors such as
+   ".card:hover .card-image img" and ".gallery-item img" never match
+   the same element, so their order does not matter. */
+/* stylelint-disable no-descending-specificity */
+
+/* ---------- Colour palette and shared values ---------- */
+:root {
+    --color-forest: #1f3a2b;
+    --color-forest-dark: #12241a;
+    --color-pine: #2f5d43;
+    --color-moss: #8fae5d;
+    --color-accent: #b4561f;
+    --color-accent-dark: #8f4317;
+    --color-sand: #f4efe6;
+    --color-sand-dark: #e4dccd;
+    --color-shadow: #c9bfad;
+    --color-ink: #1d1d1b;
+    --color-white: #fff;
+    --font-heading: oswald, "Arial Narrow", sans-serif;
+    --font-body: "Source Sans 3", arial, sans-serif;
+    --radius: 12px;
+    --max-width: 1150px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--color-ink);
+    background-color: var(--color-sand);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 0.5em;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    color: var(--color-forest);
+}
+
+h3 {
+    font-size: 1.35rem;
+    color: var(--color-forest);
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-accent-dark);
+}
+
+/* Keep anchored sections clear of the sticky header */
+[id] {
+    scroll-margin-top: 90px;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background-color: var(--color-sand-dark);
+}
+
+.section-dark {
+    color: var(--color-sand);
+    background-color: var(--color-forest);
+}
+
+.section-dark h2,
+.section-dark h3 {
+    color: var(--color-white);
+}
+
+.section-intro {
+    max-width: 680px;
+    margin-bottom: 44px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-intro.text-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.section-dark .eyebrow,
+.hero .eyebrow {
+    color: var(--color-moss);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    z-index: 200;
+    padding: 10px 16px;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border-radius: 0 0 8px 8px;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--color-moss);
+    outline-offset: 3px;
+}
+
+.btn-primary {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    color: var(--color-white);
+    background-color: var(--color-accent-dark);
+    box-shadow: 0 10px 20px -8px var(--color-forest-dark);
+}
+
+.btn-outline {
+    color: var(--color-white);
+    background-color: transparent;
+    border-color: var(--color-white);
+}
+
+.btn-outline:hover {
+    color: var(--color-forest);
+    background-color: var(--color-white);
+}
+
+.btn-ghost {
+    color: var(--color-forest);
+    background-color: transparent;
+    border-color: var(--color-forest);
+}
+
+.btn-ghost:hover {
+    color: var(--color-white);
+    background-color: var(--color-forest);
+}
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--color-forest-dark);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.logo span {
+    color: var(--color-moss);
+}
+
+.logo:hover {
+    color: var(--color-white);
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    position: relative;
+    display: block;
+    padding: 10px 14px;
+    font-family: var(--font-heading);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-sand);
+}
+
+/* Underline that grows from the left on hover and marks the current page */
+.site-nav a::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: 4px;
+    left: 14px;
+    height: 2px;
+    background-color: var(--color-moss);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--color-white);
+}
+
+.site-nav a:hover::after,
+.site-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+/* Mobile menu: a hidden checkbox opens the menu without JavaScript */
+.nav-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.nav-toggle-label {
+    display: none;
+    padding: 22px 6px;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-sand);
+    border-radius: 2px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger {
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -9px;
+}
+
+.hamburger::after {
+    top: 9px;
+}
+
+/* The three lines turn into an X when the menu is open */
+.nav-toggle:checked + .nav-toggle-label .hamburger {
+    background-color: transparent;
+}
+
+.nav-toggle:checked + .nav-toggle-label .hamburger::before {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle:checked + .nav-toggle-label .hamburger::after {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-toggle:focus + .nav-toggle-label {
+    outline: 2px solid var(--color-moss);
+    outline-offset: 2px;
+}
+
+/* ---------- Hero banners ---------- */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+    padding: 80px 0 130px;
+    overflow: hidden;
+    color: var(--color-white);
+    background-color: var(--color-forest);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Green overlay keeps the text readable on top of the photo */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, var(--color-forest-dark), var(--color-pine));
+    opacity: 0.78;
+}
+
+/* Mountain silhouette along the bottom edge */
+.hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 90px;
+    background-color: var(--color-sand);
+    clip-path: polygon(0 100%, 0 60%, 12% 30%, 22% 55%, 35% 15%, 48% 60%, 60% 35%, 72% 70%, 85% 25%, 100% 55%, 100% 100%);
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero h1 {
+    color: var(--color-white);
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: rise-in 1s ease both;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.hero-small {
+    min-height: 50vh;
+}
+
+.hero-home {
+    background-image: url("../images/hero.jpg");
+}
+
+.hero-trails {
+    background-image: url("../images/gallery-2.jpg");
+}
+
+.hero-gear {
+    background-image: url("../images/gear.jpg");
+}
+
+.hero-gallery {
+    background-image: url("../images/gallery-5.jpg");
+}
+
+.hero-join {
+    background-image: url("../images/gallery-6.jpg");
+}
+
+/* ---------- Numbered benefits (home) ---------- */
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 34px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: benefit;
+}
+
+.benefits li {
+    position: relative;
+    padding-top: 70px;
+    counter-increment: benefit;
+}
+
+.benefits li::before {
+    content: counter(benefit, decimal-leading-zero);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    line-height: 1;
+    color: var(--color-moss);
+}
+
+/* ---------- Cards ---------- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 30px -18px var(--color-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 40px -20px var(--color-forest);
+}
+
+.card-image {
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: var(--color-pine);
+    transition: transform 0.6s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.card-body p {
+    flex: 1;
+}
+
+.card-link {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-link::after {
+    content: " \2192";
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-link::after {
+    transform: translateX(5px);
+}
+
+/* ---------- Difficulty badges ---------- */
+.badge {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 999px;
+}
+
+.badge-green {
+    color: #2d5016;
+    background-color: #dfeccd;
+}
+
+.badge-blue {
+    color: #1d4f8c;
+    background-color: #d6e4f5;
+}
+
+.badge-black {
+    color: var(--color-white);
+    background-color: var(--color-ink);
+}
+
+/* ---------- Stats band (home) ---------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(2.6rem, 6vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--color-moss);
+}
+
+/* ---------- Quote (home) ---------- */
+.quote-block {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.quote-block::before {
+    content: "\201C";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    font-family: Georgia, serif;
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--color-moss);
+    transform: translateX(-50%);
+}
+
+.quote-block blockquote {
+    margin: 0;
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-style: italic;
+}
+
+.quote-block figcaption {
+    margin-top: 12px;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* ---------- Difficulty table (trails) ---------- */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 30px -18px var(--color-shadow);
+}
+
+.difficulty-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+}
+
+.difficulty-table caption {
+    padding: 0 0 12px;
+    font-style: italic;
+    text-align: left;
+}
+
+.difficulty-table th,
+.difficulty-table td {
+    padding: 14px 18px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.difficulty-table th {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background-color: var(--color-forest);
+}
+
+.difficulty-table td {
+    border-bottom: 1px solid var(--color-sand-dark);
+}
+
+.difficulty-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.difficulty-table tbody tr:nth-child(even) {
+    background-color: #faf7f1;
+}
+
+.difficulty-table tbody tr:hover {
+    background-color: #efe7d8;
+}
+
+/* Trail symbols drawn with CSS shapes */
+.symbol {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.symbol-white {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-ink);
+    border-radius: 50%;
+}
+
+.symbol-green {
+    background-color: #3b8a3e;
+    border-radius: 50%;
+}
+
+.symbol-blue {
+    background-color: #2b6cb0;
+}
+
+.symbol-black {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    background-color: var(--color-ink);
+    transform: rotate(45deg);
+}
+
+/* ---------- Trail rules (numbered with CSS counters) ---------- */
+.rules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: rule;
+}
+
+.rules li {
+    position: relative;
+    padding: 20px 20px 20px 76px;
+    background-color: var(--color-white);
+    border-left: 5px solid var(--color-accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    counter-increment: rule;
+}
+
+.rules li::before {
+    content: counter(rule);
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    line-height: 40px;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-forest);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.rules strong {
+    display: block;
+    color: var(--color-forest);
+}
+
+/* ---------- Flip cards (gear) ---------- */
+.flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.flip-card {
+    height: 320px;
+    perspective: 1000px;
+    border-radius: var(--radius);
+}
+
+.flip-card:focus {
+    outline: 3px solid var(--color-moss);
+    outline-offset: 4px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 28px;
+    border-radius: var(--radius);
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    background: linear-gradient(150deg, var(--color-pine), var(--color-forest-dark));
+}
+
+.flip-card-front h3 {
+    color: var(--color-white);
+}
+
+.flip-card-back {
+    background-color: var(--color-white);
+    transform: rotateY(180deg);
+}
+
+.travel {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    line-height: 1.1;
+    color: var(--color-moss);
+}
+
+.flip-hint {
+    margin: 12px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ---------- Split layout: image beside text ---------- */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.split-image img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    background-color: var(--color-pine);
+    border-radius: var(--radius);
+    box-shadow: 20px 20px 0 var(--color-moss);
+}
+
+/* ---------- Checklist with CSS check marks ---------- */
+.checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.checklist li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 38px;
+}
+
+.checklist li::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-moss);
+    border-radius: 50%;
+}
+
+.checklist li::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--color-white);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* ---------- FAQ accordion (gear) ---------- */
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq details {
+    margin-bottom: 12px;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+}
+
+.faq summary {
+    position: relative;
+    padding: 18px 60px 18px 22px;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.faq summary:hover {
+    background-color: #faf7f1;
+}
+
+.faq summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--color-accent);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 22px 6px;
+    animation: fade-in 0.4s ease;
+}
+
+/* ---------- Slideshow (gallery), pure CSS ---------- */
+.slideshow {
+    position: relative;
+    height: clamp(260px, 50vw, 540px);
+    overflow: hidden;
+    background-color: var(--color-forest);
+    border-radius: var(--radius);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    animation: slide-fade 20s infinite;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.slide:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.slideshow:hover .slide {
+    animation-play-state: paused;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    font-family: var(--font-heading);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background-color: var(--color-forest-dark);
+    border-radius: 8px;
+}
+
+/* ---------- Gallery grid with captions ---------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background-color: var(--color-pine);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus img {
+    filter: brightness(75%);
+    transform: scale(1.06);
+}
+
+.gallery-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px 16px 14px;
+    font-weight: 600;
+    color: var(--color-white);
+    background: linear-gradient(transparent, var(--color-forest-dark));
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus .gallery-caption {
+    transform: translateY(0);
+}
+
+/* ---------- Lightbox, opened with :target ---------- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--color-forest-dark);
+}
+
+.lightbox:target {
+    display: flex;
+    animation: fade-in 0.3s ease;
+}
+
+.lightbox-figure {
+    max-width: 1000px;
+    margin: 0;
+    text-align: center;
+    color: var(--color-sand);
+}
+
+.lightbox-figure img {
+    width: auto;
+    max-height: 75vh;
+    margin: 0 auto 12px;
+    border-radius: 8px;
+}
+
+.lightbox-close,
+.lightbox-arrow {
+    font-size: 2.6rem;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--color-sand);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+
+.lightbox-close:hover,
+.lightbox-arrow:hover {
+    color: var(--color-moss);
+    transform: scale(1.2);
+}
+
+/* ---------- Join form ---------- */
+.join-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.ride-form {
+    padding: 36px;
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 30px -18px var(--color-shadow);
+}
+
+.ride-form fieldset {
+    margin: 0 0 30px;
+    padding: 0;
+    border: 0;
+}
+
+.ride-form legend {
+    margin-bottom: 16px;
+    padding: 0;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    color: var(--color-forest);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.form-group label,
+.group-label {
+    font-weight: 600;
+}
+
+.required::after {
+    content: " *";
+    color: var(--color-accent);
+}
+
+.form-note {
+    font-size: 0.95rem;
+}
+
+.ride-form input[type="text"],
+.ride-form input[type="email"],
+.ride-form input[type="tel"],
+.ride-form input[type="date"],
+.ride-form select,
+.ride-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font: inherit;
+    color: var(--color-ink);
+    background-color: var(--color-sand);
+    border: 2px solid var(--color-sand-dark);
+    border-radius: 8px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.ride-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.ride-form input:focus,
+.ride-form select:focus,
+.ride-form textarea:focus {
+    background-color: var(--color-white);
+    border-color: var(--color-pine);
+    outline: 3px solid var(--color-moss);
+    outline-offset: 1px;
+}
+
+.ride-form input[type="range"] {
+    width: 100%;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+/* Skill level radios styled as pill buttons */
+.pill-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill {
+    position: relative;
+}
+
+.pill input {
+    position: absolute;
+    opacity: 0;
+}
+
+.pill span {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid var(--color-sand-dark);
+    border-radius: 999px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pill span:hover {
+    border-color: var(--color-pine);
+}
+
+.pill input:checked + span {
+    color: var(--color-white);
+    background-color: var(--color-forest);
+    border-color: transparent;
+}
+
+.pill input:focus + span {
+    outline: 3px solid var(--color-moss);
+    outline-offset: 2px;
+}
+
+.checkbox-options {
+    display: grid;
+    gap: 8px;
+}
+
+.checkbox-option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox-option input {
+    width: 20px;
+    height: 20px;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Side panel with ride schedule */
+.info-card {
+    padding: 30px;
+    color: var(--color-sand);
+    background-color: var(--color-forest);
+    border-radius: var(--radius);
+}
+
+.info-card h2 {
+    font-size: 1.6rem;
+    color: var(--color-white);
+}
+
+.schedule {
+    margin: 0 0 20px;
+}
+
+.schedule dt {
+    font-family: var(--font-heading);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-moss);
+}
+
+.schedule dd {
+    margin: 0 0 16px;
+}
+
+/* ---------- Bootstrap components (join), themed with Bootstrap's own variables ---------- */
+.alert-success {
+    --bs-alert-color: var(--color-forest);
+    --bs-alert-bg: #e8efdb;
+    --bs-alert-border-color: var(--color-moss);
+    --bs-alert-border-radius: 8px;
+}
+
+.info-card .progress {
+    --bs-progress-height: 8px;
+    --bs-progress-bg: var(--color-forest-dark);
+    --bs-progress-bar-bg: var(--color-moss);
+    --bs-progress-border-radius: 999px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    padding: 56px 0 24px;
+    color: var(--color-sand);
+    background-color: var(--color-forest-dark);
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.footer-text {
+    max-width: 460px;
+    margin-top: 12px;
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    color: var(--color-white);
+}
+
+.footer-nav ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-sand);
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--color-moss);
+}
+
+.footer-bottom {
+    margin: 30px 0 0;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #c9d3c4;
+    border-top: 1px solid var(--color-pine);
+}
+
+/* ---------- Animations ---------- */
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Each of the four slides is visible for a quarter of the cycle */
+@keyframes slide-fade {
+    0% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ---------- Responsive: tablets and phones ---------- */
+@media (width <= 800px) {
+    .section {
+        padding: 56px 0;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        width: 100%;
+        padding-bottom: 12px;
+    }
+
+    .nav-toggle:checked ~ .site-nav {
+        display: block;
+        animation: fade-in 0.3s ease;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .site-nav a {
+        padding: 12px 4px;
+        border-top: 1px solid var(--color-pine);
+    }
+
+    .site-nav a::after {
+        right: auto;
+        left: 4px;
+        width: 40px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero-small {
+        min-height: 40vh;
+    }
+
+    .split,
+    .join-layout,
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .split {
+        gap: 40px;
+    }
+
+    .split-image img {
+        height: 300px;
+        box-shadow: 10px 10px 0 var(--color-moss);
+    }
+
+    /* Touch screens have no hover, so captions are always shown */
+    .gallery-caption {
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive: small phones ---------- */
+@media (width <= 520px) {
+    .hero-actions .btn,
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ride-form {
+        padding: 22px;
+    }
+
+    .lightbox-arrow {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .lightbox-prev {
+        left: 30%;
+    }
+
+    .lightbox-next {
+        right: 30%;
+    }
+}
+
+/* ---------- Wide screens ---------- */
+@media (width >= 801px) {
+    /* The menu checkbox is only needed on small screens */
+    .nav-toggle {
+        display: none;
+    }
+
+    /* Feature photo spans two columns */
+    .gallery-grid li:first-child {
+        grid-column: span 2;
+    }
+}
+
+/* ---------- Respect users who prefer less motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .slide:first-child {
+        opacity: 1;
+    }
+}

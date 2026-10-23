@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mountain biking riding styles, trail difficulty levels and trail rules explained.">
+    <title>Trails | Dirt &amp; Pine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Dirt <span>&amp;</span> Pine</a>
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span class="hamburger"></span>
+                <span class="visually-hidden">Menu</span>
+            </label>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trails.html" aria-current="page">Trails</a></li>
+                    <li><a href="gear.html">Gear</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="join.html">Join a Ride</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero hero-small hero-trails">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow">Trail guide</span>
+                    <h1>Know your trail</h1>
+                    <p class="hero-text">Riding styles, difficulty levels and the rules every rider should follow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="styles">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Riding styles</span>
+                    <h2>Four ways to ride</h2>
+                    <p>Mountain biking is not one sport but many. Each style has its own kind of trail, bike and rider.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/xc.jpg" alt="Cross-country rider climbing a forest path" width="800" height="533" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge badge-green">Beginner friendly</span>
+                            <h3>Cross-country</h3>
+                            <p>Long rides with climbs and fast flowing sections. XC is all about endurance, and light bikes make the climbs easier.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/trail.jpg" alt="Rider on a narrow singletrack trail through the forest" width="800" height="533" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge badge-blue">Intermediate</span>
+                            <h3>Trail</h3>
+                            <p>The all-rounder. Trail riding mixes climbing and descending on singletrack, and it is what most riders do on a weekend.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/enduro.jpg" alt="Enduro rider leaning into a steep corner" width="800" height="533" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge badge-black">Advanced</span>
+                            <h3>Enduro</h3>
+                            <p>Pedal up, race down. In enduro races only the downhill stages are timed, so riders need both fitness and technical skill.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/downhill.jpg" alt="Downhill rider in full protective gear jumping off a rock" width="800" height="533" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge badge-black">Expert</span>
+                            <h3>Downhill</h3>
+                            <p>Steep, fast and rough. Riders use lifts or shuttles to get up and full-face helmets and body armour for the way down.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="difficulty">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Difficulty</span>
+                    <h2>Reading trail signs</h2>
+                    <p>Many bike parks and trail centres mark their trails with these symbols. Start easy and step up when you feel in control.</p>
+                </div>
+                <div class="table-wrapper">
+                    <table class="difficulty-table">
+                        <caption>Common trail difficulty symbols</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Symbol</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">What to expect</th>
+                                <th scope="col">Good for</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="symbol symbol-white"></span>White circle</td>
+                                <td>Easiest</td>
+                                <td>Wide, smooth and nearly flat paths</td>
+                                <td>First rides and children</td>
+                            </tr>
+                            <tr>
+                                <td><span class="symbol symbol-green"></span>Green circle</td>
+                                <td>Easy</td>
+                                <td>Gentle slopes, some roots and small bumps</td>
+                                <td>Beginners</td>
+                            </tr>
+                            <tr>
+                                <td><span class="symbol symbol-blue"></span>Blue square</td>
+                                <td>Intermediate</td>
+                                <td>Narrow singletrack, steeper climbs and rocks</td>
+                                <td>Riders with basic skills</td>
+                            </tr>
+                            <tr>
+                                <td><span class="symbol symbol-black"></span>Black diamond</td>
+                                <td>Difficult</td>
+                                <td>Steep sections, drops and technical features</td>
+                                <td>Experienced riders</td>
+                            </tr>
+                            <tr>
+                                <td><span class="symbol symbol-black"></span><span class="symbol symbol-black"></span>Double black</td>
+                                <td>Extremely difficult</td>
+                                <td>Large jumps, very steep and exposed terrain</td>
+                                <td>Experts only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="rules">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Trail rules</span>
+                    <h2>Ride kind, ride safe</h2>
+                    <p>Trails are shared with walkers, runners and other riders. These simple rules keep them open and safe for everyone.</p>
+                </div>
+                <ol class="rules">
+                    <li><strong>Ride open trails only</strong> Respect closures and private land.</li>
+                    <li><strong>Leave no trace</strong> Stay on the trail and avoid riding when it is very muddy.</li>
+                    <li><strong>Control your bike</strong> Ride at a speed where you can stop for what is around the corner.</li>
+                    <li><strong>Yield to others</strong> Give way to walkers and slow down when you pass them.</li>
+                    <li><strong>Never scare animals</strong> Give wildlife and farm animals plenty of space.</li>
+                    <li><strong>Plan ahead</strong> Bring water, a spare tube and tell someone where you are going.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container split">
+                <div class="split-image">
+                    <img src="images/gallery-3.jpg" alt="Rider stopped on a hilltop looking over the forest" width="800" height="1000" loading="lazy">
+                </div>
+                <div>
+                    <span class="eyebrow">First ride tips</span>
+                    <h2>Before your first trail</h2>
+                    <ul class="checklist">
+                        <li>Lower your saddle a little on descents to move more freely.</li>
+                        <li>Keep your pedals level and stand up over rough ground.</li>
+                        <li>Look where you want to go, not at the obstacle.</li>
+                        <li>Use both brakes gently instead of grabbing them.</li>
+                        <li>Walk any section that looks too hard. Every rider does it.</li>
+                    </ul>
+                    <a class="btn btn-ghost" href="gear.html">Check your gear</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <a class="logo" href="index.html">Dirt <span>&amp;</span> Pine</a>
+                    <p class="footer-text">A mountain biking guide for riders of every level, from the first wobbly ride to black diamond descents.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer">
+                    <h2 class="footer-heading">Explore</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trails.html">Trails</a></li>
+                        <li><a href="gear.html">Gear</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="join.html">Join a Ride</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-bottom">&copy; 2026 Izolde Springe. Student project for the Website Development course at Laurea University of Applied Sciences.</p>
+        </div>
+    </footer>
+</body>
+</html>
