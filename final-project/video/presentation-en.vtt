@@ -1,0 +1,246 @@
+WEBVTT
+
+1
+00:00:00.400 --> 00:00:03.282
+Hello, and welcome to my project presentation.
+
+2
+00:00:03.282 --> 00:00:12.494
+My name is Izolde Springe, and this is Dirt and Pine, my final project for the Website Development course at Laurea University of Applied Sciences.
+
+3
+00:00:13.500 --> 00:00:21.184
+In this course we learned to build websites with HTML and CSS, from the basics in the first workshop to Bootstrap in workshop six.
+
+4
+00:00:21.184 --> 00:00:29.635
+The task of the final project was to create and publish a website of our own, with at least four pages, that also works well on mobile devices.
+
+5
+00:00:29.635 --> 00:00:31.763
+I chose mountain biking as my topic.
+
+6
+00:00:31.763 --> 00:00:35.901
+Many people would like to try it, but they do not know where to start:
+
+7
+00:00:35.901 --> 00:00:40.215
+which trails suit them, what kind of bike they need, or who to ride with.
+
+8
+00:00:40.215 --> 00:00:44.825
+Dirt and Pine answers those questions in one place, for riders of every level.
+
+9
+00:00:45.833 --> 00:00:49.548
+Let me start with the overall architecture.
+
+10
+00:00:49.548 --> 00:00:53.867
+Dirt and Pine is a static website with five pages:
+
+11
+00:00:53.867 --> 00:00:57.668
+Home, Trails, Gear, Gallery and Join a Ride.
+
+12
+00:00:57.668 --> 00:01:00.778
+css, so the design stays consistent.
+
+13
+00:01:00.778 --> 00:01:03.802
+The images are in their own folder.
+
+14
+00:01:03.802 --> 00:01:10.367
+The site is published with GitHub Pages, straight from my GitHub repository.
+
+15
+00:01:11.367 --> 00:01:13.716
+The design is inspired by the forest.
+
+16
+00:01:13.716 --> 00:01:16.637
+CSS custom properties hold the colour palette:
+
+17
+00:01:16.637 --> 00:01:20.065
+pine green, moss, warm sand and a burnt orange accent.
+
+18
+00:01:20.065 --> 00:01:24.001
+Headings use the Oswald font and body text uses Source Sans 3.
+
+19
+00:01:24.001 --> 00:01:26.160
+Every page has the same structure:
+
+20
+00:01:26.160 --> 00:01:36.001
+a sticky header with the menu, a large banner with a mountain-shaped edge made with clip-path, the content sections, and a footer with links to every page.
+
+21
+00:01:37.001 --> 00:01:39.453
+The technologies are HTML5 and CSS3.
+
+22
+00:01:39.453 --> 00:01:47.489
+I used semantic elements such as header, nav, main, section, article and footer, together with accessibility features:
+
+23
+00:01:47.489 --> 00:01:52.053
+alt texts, a label for every form field and a skip to content link.
+
+24
+00:01:52.053 --> 00:01:56.548
+Every interactive feature on the site is built without JavaScript.
+
+25
+00:01:56.548 --> 00:02:01.997
+On the Join a Ride page I also used Bootstrap 5, for an alert and progress bars.
+
+26
+00:02:01.997 --> 00:02:07.718
+Bootstrap is loaded into its own cascade layer, so my own styles always win over it.
+
+27
+00:02:08.734 --> 00:02:10.548
+Responsiveness was important.
+
+28
+00:02:10.548 --> 00:02:17.554
+The grids use repeat with auto-fit and minmax, so the number of columns adapts to the screen without extra code.
+
+29
+00:02:17.554 --> 00:02:25.560
+Headings scale smoothly with the clamp function, and media queries at 800 and 520 pixels stack the layout on tablets and phones.
+
+30
+00:02:26.567 --> 00:02:30.372
+On small screens the menu becomes a hamburger button.
+
+31
+00:02:30.372 --> 00:02:33.028
+It is a hidden checkbox with a label.
+
+32
+00:02:33.028 --> 00:02:38.915
+checked selector shows the menu, and the three lines of the icon rotate into an X.
+
+33
+00:02:39.915 --> 00:02:43.067
+The slideshow uses a single keyframes animation.
+
+34
+00:02:43.067 --> 00:02:50.553
+Each slide gets a different animation delay, so the four photos fade in one after another, and hovering pauses it.
+
+35
+00:02:50.553 --> 00:02:51.604
+target selector:
+
+36
+00:02:51.604 --> 00:02:57.645
+clicking a photo changes the address to that photo's id, which makes its large view visible.
+
+37
+00:02:58.649 --> 00:03:01.719
+The bike type cards on the Gear page flip in 3D.
+
+38
+00:03:01.719 --> 00:03:11.954
+The card sets a perspective, the inner element keeps its 3D space with preserve-3d, and on hover or keyboard focus it rotates 180 degrees to show the back side.
+
+39
+00:03:12.954 --> 00:03:14.929
+Now let me show the website itself.
+
+40
+00:03:14.929 --> 00:03:18.146
+The home page starts with a large banner and two buttons.
+
+41
+00:03:18.146 --> 00:03:26.950
+Below it are the reasons to ride, numbered automatically with CSS counters, and cards for each part of the site that lift and zoom when you hover over them.
+
+42
+00:03:26.950 --> 00:03:29.207
+Further down are some facts and a quote.
+
+43
+00:03:32.720 --> 00:03:42.264
+The Trails page presents the four riding styles, a table that explains the trail difficulty symbols, and the trail rules, again numbered with CSS counters.
+
+44
+00:03:45.764 --> 00:03:48.902
+On the Gear page, the cards flip when I hover over them.
+
+45
+00:03:48.902 --> 00:03:56.521
+The essential kit is a custom checklist, and the frequently asked questions are an accordion made with the details and summary elements.
+
+46
+00:04:00.031 --> 00:04:02.817
+The Gallery page has the automatic slideshow.
+
+47
+00:04:02.817 --> 00:04:06.099
+In the photo gallery, the captions slide up on hover.
+
+48
+00:04:06.099 --> 00:04:09.010
+When I click a photo, it opens in the lightbox.
+
+49
+00:04:09.010 --> 00:04:13.035
+I can move to the next photo with the arrows, and close it again.
+
+50
+00:04:16.535 --> 00:04:19.186
+The Join a Ride page has the booking form.
+
+51
+00:04:19.186 --> 00:04:20.764
+It uses many input types:
+
+52
+00:04:20.764 --> 00:04:29.348
+text, email and phone fields, a drop-down list, a date picker, skill level radio buttons styled as pills, a range slider and checkboxes.
+
+53
+00:04:29.348 --> 00:04:31.809
+The browser checks the required fields.
+
+54
+00:04:31.809 --> 00:04:38.310
+Next to the form is the weekly schedule, where Bootstrap progress bars show how many places are booked.
+
+55
+00:04:41.810 --> 00:04:43.973
+Finally, here is the site on a phone.
+
+56
+00:04:43.973 --> 00:04:53.387
+The layout stacks into one column, the images scale to the screen, and the menu collapses into the hamburger button, which opens the menu with a short animation.
+
+57
+00:04:56.887 --> 00:05:06.589
+To summarize, Dirt and Pine is a five-page responsive website built with HTML and CSS, and every page passes the W3C HTML and CSS validators without errors.
+
+58
+00:05:06.589 --> 00:05:08.890
+The biggest challenge for me was CSS.
+
+59
+00:05:08.890 --> 00:05:18.778
+Getting the layout and the small details right took a lot of time, and making Bootstrap work together with my own stylesheet needed the cascade layer solution.
+
+60
+00:05:18.778 --> 00:05:26.179
+I have learned a lot since the first workshop, and now I can build and publish a complete responsive website on my own.
+
+61
+00:05:27.187 --> 00:05:30.044
+Thank you for your time, and thank you for watching.
+

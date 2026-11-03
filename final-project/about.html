@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About the Dirt &amp; Pine website: a video presentation of the project and how it was built.">
+    <title>About the Website | Dirt &amp; Pine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Dirt <span>&amp;</span> Pine</a>
+            <input class="nav-toggle" type="checkbox" id="nav-toggle">
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span class="hamburger"></span>
+                <span class="visually-hidden">Menu</span>
+            </label>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trails.html">Trails</a></li>
+                    <li><a href="gear.html">Gear</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="join.html">Join a Ride</a></li>
+                    <li><a href="about.html" aria-current="page">About the Website</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero hero-small hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow">About the website</span>
+                    <h1>Behind the trails</h1>
+                    <p class="hero-text">Watch the video presentation of this project and find out how the site was built.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Video presentation</span>
+                    <h2>The project in five minutes</h2>
+                    <p>
+                        The video introduces the website, explains its structure, design and code,
+                        and shows every page in action. English subtitles can be turned on in the player.
+                    </p>
+                </div>
+                <figure class="video-figure">
+                    <video controls preload="metadata" playsinline width="1920" height="1080" poster="video/presentation-poster.jpg">
+                        <source src="video/presentation.mp4" type="video/mp4">
+                        <track kind="captions" src="video/presentation-en.vtt" srclang="en" label="English">
+                        Your browser cannot play this video. <a href="video/presentation.mp4">Download the video presentation</a>.
+                    </video>
+                    <figcaption>Dirt &amp; Pine project presentation, Website Development course, autumn 2026 (5 min 30 s)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container split">
+                <div>
+                    <span class="eyebrow">The project</span>
+                    <h2>Why this website exists</h2>
+                    <p>
+                        Dirt &amp; Pine is my final project for the Website Development course at
+                        Laurea University of Applied Sciences. The goal was to design, build and publish
+                        a complete website of my own that also works well on mobile devices.
+                    </p>
+                    <p>
+                        I chose mountain biking because it is a great way to explore nature and clear your mind,
+                        and I wanted to encourage other people to try it too.
+                    </p>
+                    <ul class="checklist">
+                        <li>Written by hand in HTML5 and CSS3, with one shared stylesheet</li>
+                        <li>Every interactive feature works without JavaScript</li>
+                        <li>Responsive layout for phones, tablets and desktops</li>
+                        <li>Checked with the W3C HTML and CSS validators</li>
+                    </ul>
+                </div>
+                <aside class="info-card">
+                    <h2>Project facts</h2>
+                    <dl class="schedule">
+                        <dt>Author</dt>
+                        <dd>Izolde Springe</dd>
+                        <dt>Course</dt>
+                        <dd>Web Site Development ND00CC68-3003, Laurea University of Applied Sciences</dd>
+                        <dt>Built with</dt>
+                        <dd>HTML5, CSS3 and Bootstrap 5 (on the Join a Ride page)</dd>
+                        <dt>Hosting</dt>
+                        <dd>GitHub Pages</dd>
+                        <dt>Images</dt>
+                        <dd>AI-generated illustrations, not real photographs</dd>
+                    </dl>
+                    <a class="btn btn-outline" href="https://github.com/ispringe/website_dev_course_autumn_2026">View the code on GitHub</a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container text-center">
+                <h2>Seen enough? Time to ride.</h2>
+                <p>Pick a trail, check your gear and join a group ride.</p>
+                <a class="btn btn-primary" href="join.html">Join a ride</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <a class="logo" href="index.html">Dirt <span>&amp;</span> Pine</a>
+                    <p class="footer-text">A mountain biking guide for riders of every level, from the first wobbly ride to black diamond descents.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer">
+                    <h2 class="footer-heading">Explore</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trails.html">Trails</a></li>
+                        <li><a href="gear.html">Gear</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="join.html">Join a Ride</a></li>
+                        <li><a href="about.html">About the Website</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-bottom">&copy; 2026 Izolde Springe. Student project for the Website Development course at Laurea University of Applied Sciences.</p>
+        </div>
+    </footer>
+</body>
+</html>
