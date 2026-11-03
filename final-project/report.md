@@ -27,13 +27,14 @@ Website Development / Berfin Ala-Krekola
 
 My project is **Dirt & Pine**, a website about mountain biking (MTB). It is a guide for riders of every level, from people thinking about their first trail ride to riders who want to try more technical trails. The site explains the different riding styles, how to read trail difficulty signs, what gear is needed, and it lets visitors book a place on a weekly group ride.
 
-The site has five pages:
+The site has six pages:
 
 - **Home**: introduction to mountain biking, why it is worth trying, facts and links to the rest of the site
 - **Trails**: the four riding styles, a table of trail difficulty symbols, trail rules and tips for a first ride
 - **Gear**: the main bike types, an essential kit checklist and answers to common questions
 - **Gallery**: an automatic slideshow and a photo gallery that opens photos in a larger view
 - **Join a Ride**: a booking form for group rides and the weekly ride schedule
+- **About the Website**: the video presentation of the project, which can be watched directly on the site, and short facts about the project
 
 I chose mountain biking as my topic because it is a great way to explore nature and clear my mind. I wanted to make a site that could encourage other people to try it too.
 
@@ -47,7 +48,8 @@ The website is built with **HTML5 and CSS3**, plus a small part of the **Bootstr
 - A data table with `caption`, `thead`, `tbody` and `scope` attributes on the headings
 - A booking form with many input types: text, email, tel, date, select, radio buttons, checkboxes, a range slider and a textarea. It uses `fieldset` and `legend` to group fields and `required` for browser validation.
 - A FAQ accordion made with the native `details` and `summary` elements
-- A definition list (`dl`) for the ride schedule
+- A definition list (`dl`) for the ride schedule and the project facts
+- A `video` element on the About the Website page, with player controls, a poster image shown before playback and an English subtitle track (`track` with a WebVTT file)
 - Accessibility features: alt text on every image, a "skip to content" link, `aria-current` to mark the current page in the menu, and labels for every form field
 
 **CSS**
@@ -103,10 +105,12 @@ final-project/
 ├── gear.html       Gear
 ├── gallery.html    Gallery
 ├── join.html       Join a Ride
+├── about.html      About the Website
 ├── css/
 │   ├── style.css       Shared stylesheet
 │   └── bootstrap.css   Loads Bootstrap 5 (Join a Ride page)
-└── images/         Photos
+├── images/         Photos
+└── video/          Video presentation, poster image and subtitles
 ```
 
 ## 4 Self-assessment and development of my skills
@@ -139,13 +143,17 @@ https://github.com/ispringe/website_dev_course_autumn_2026
 
 ### 6.3 Link to the project video presentation
 
-[Add the video link here, for example YouTube or video.laurea.fi.]
+The video is published on the website's About the Website page:
+https://ispringe.github.io/website_dev_course_autumn_2026/final-project/about.html
+
+Direct link to the video file:
+https://ispringe.github.io/website_dev_course_autumn_2026/final-project/video/presentation.mp4
 
 ## 7 Validation screenshots
 
 [Add screenshots of the results for each page and for the stylesheet.]
 
-- W3C HTML validator (https://validator.w3.org/): index.html, trails.html, gear.html, gallery.html, join.html
+- W3C HTML validator (https://validator.w3.org/): index.html, trails.html, gear.html, gallery.html, join.html, about.html
 - W3C CSS validator (https://jigsaw.w3.org/css-validator/): css/style.css
 - HTMLHint
 - Stylelint
@@ -159,6 +167,10 @@ Isaacson, W. 2007. Einstein: His Life and Universe. New York: Simon & Schuster. 
 **Electronic**
 
 Anthropic. 2026. Claude Code. AI assistant used to generate all 16 images on the website. The images are illustrations drawn with a Python script using the Pillow library, not real photographs. Accessed 23 October 2026. https://www.anthropic.com/claude
+
+Anthropic. 2026. Claude Code. AI assistant used to produce the video presentation: the narration script, the slides, the screen recordings of the website and the video editing. Accessed 3 November 2026. https://www.anthropic.com/claude
+
+Apple. 2026. macOS text-to-speech, voice "Samantha". Used for the voiceover of the video presentation. Accessed 3 November 2026. https://www.apple.com/macos/
 
 Bootstrap. 2026. Bootstrap 5.3 documentation: Alerts, Progress and Utilities. Accessed 23 October 2026. https://getbootstrap.com/docs/5.3/
 
