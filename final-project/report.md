@@ -19,6 +19,10 @@ Website Development / Berfin Ala-Krekola
    - 6.2 Link to the GitHub repository
    - 6.3 Link to the project video presentation
 7. Validation screenshots
+   - 7.1 W3C HTML validator
+   - 7.2 W3C CSS validator
+   - 7.3 HTMLHint
+   - 7.4 Stylelint
 8. Sources
 
 ---
@@ -141,7 +145,7 @@ https://ispringe.github.io/website_dev_course_autumn_2026/final-project/
 
 ### 6.2 Link to the GitHub repository
 
-https://github.com/ispringe/website_dev_course_autumn_2026
+https://github.com/ispringe/website_dev_course_autumn_2026/tree/main/final-project
 
 ### 6.3 Link to the project video presentation
 
@@ -153,12 +157,57 @@ https://ispringe.github.io/website_dev_course_autumn_2026/final-project/video/pr
 
 ## 7 Validation screenshots
 
-[Add screenshots of the results for each page and for the stylesheet.]
+I checked every page and the stylesheet on 3 November 2026. The W3C validators checked the published website, and HTMLHint and Stylelint checked the project files. No errors were found.
 
-- W3C HTML validator (https://validator.w3.org/): index.html, trails.html, gear.html, gallery.html, join.html, about.html
-- W3C CSS validator (https://jigsaw.w3.org/css-validator/): css/style.css
-- HTMLHint
-- Stylelint
+| Tool | Checked | Result |
+|---|---|---|
+| W3C HTML validator | all six pages | No errors or warnings |
+| W3C CSS validator | css/style.css | No errors |
+| HTMLHint | all six pages | No errors |
+| Stylelint | css/style.css and css/bootstrap.css | 0 problems |
+
+### 7.1 W3C HTML validator
+
+https://validator.w3.org/
+
+![W3C HTML validator result for index.html](report-images/html-index.png)
+*Figure 1. Home page (index.html)*
+
+![W3C HTML validator result for trails.html](report-images/html-trails.png)
+*Figure 2. Trails page (trails.html)*
+
+![W3C HTML validator result for gear.html](report-images/html-gear.png)
+*Figure 3. Gear page (gear.html)*
+
+![W3C HTML validator result for gallery.html](report-images/html-gallery.png)
+*Figure 4. Gallery page (gallery.html)*
+
+![W3C HTML validator result for join.html](report-images/html-join.png)
+*Figure 5. Join a Ride page (join.html)*
+
+![W3C HTML validator result for about.html](report-images/html-about.png)
+*Figure 6. About the Website page (about.html)*
+
+### 7.2 W3C CSS validator
+
+https://jigsaw.w3.org/css-validator/ (profile CSS level 3 + SVG)
+
+![W3C CSS validator result for style.css](report-images/css-style.png)
+*Figure 7. Stylesheet (css/style.css)*
+
+The validator also lists 14 warnings. They are all the same note: "Due to their dynamic nature, CSS variables are currently not statically checked". This means that the validator cannot check the values of CSS custom properties (variables). It is not an error in the code.
+
+### 7.3 HTMLHint
+
+![HTMLHint result for all HTML pages](report-images/htmlhint.png)
+*Figure 8. HTMLHint checked all six HTML files*
+
+### 7.4 Stylelint
+
+Stylelint was run with the standard rule set (stylelint-config-standard).
+
+![Stylelint result for the CSS files](report-images/stylelint.png)
+*Figure 9. Stylelint checked both CSS files*
 
 ## 8 Sources
 
@@ -182,9 +231,13 @@ International Mountain Bicycling Association (IMBA). 2026. Rules of the Trail. A
 
 Mozilla. 2026. MDN Web Docs: HTML and CSS reference. Accessed 23 October 2026. https://developer.mozilla.org/
 
-W3C. 2026. Markup Validation Service. Accessed 23 October 2026. https://validator.w3.org/
+W3C. 2026. Markup Validation Service. Accessed 3 November 2026. https://validator.w3.org/
 
-W3C. 2026. CSS Validation Service. Accessed 23 October 2026. https://jigsaw.w3.org/css-validator/
+W3C. 2026. CSS Validation Service. Accessed 3 November 2026. https://jigsaw.w3.org/css-validator/
+
+HTMLHint. 2026. HTMLHint, version 1.9.2. Accessed 3 November 2026. https://htmlhint.com/
+
+Stylelint. 2026. Stylelint, version 18.0.0, with stylelint-config-standard. Accessed 3 November 2026. https://stylelint.io/
 
 **Unpublished**
 
