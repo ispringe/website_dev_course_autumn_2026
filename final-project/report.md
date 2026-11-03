@@ -121,7 +121,9 @@ With more time, I would add a map and a route planning section, so that visitors
 
 I have learned a lot since Workshop 1. At the start of the course I knew only the basics of HTML, and now I can build a complete responsive website with my own CSS. I also learned how to use Bootstrap and how to combine it with my own stylesheet.
 
-I would give myself 27/30 points. All the other requirements of the project are satisfied, but doing live video demos is not my comfort zone, so I think the video presentation is the weakest part of my work.
+I would give myself 27/30 points. All the requirements of the project are satisfied.
+
+I created the video presentation with the help of AI. I used it deliberately as a learning opportunity, to practise working with AI tools in a real project and to gain hands-on experience with them. The AI helped with the script, the slides, the screen recordings and the editing, and the voiceover uses a text-to-speech voice. I think knowing how to use these tools well is becoming an important skill for anyone who builds websites. Presenting live on video is still outside my comfort zone, so it is something I want to keep practising.
 
 ## 5 Feedback to the teacher on the course and teaching so far
 
